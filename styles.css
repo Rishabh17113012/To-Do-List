@@ -1,4 +1,3 @@
-/* Reset */
 * {
     margin: 0;
     padding: 0;
@@ -152,7 +151,7 @@
     transition: width 0.3s;
   }
   
-  /* Miss Minutes Sneaking */
+  /* Miss Minutes */
   .miss-minutes {
     position: absolute;
     bottom: -30px;

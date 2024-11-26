@@ -29,7 +29,32 @@
     border-radius: 15px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   }
-  
+  /* Logo styling */
+.logo-container {
+  position: relative;
+  z-index: 2; /* Ensures the logo appears above the background */
+  text-align: center;
+}
+
+.logo {
+  max-width: 300px;
+  height: auto;
+  opacity: 0;
+  animation: fadeInLogo 2s ease-in-out 1s forwards;
+}
+
+/* Fading logo animation */
+@keyframes fadeInLogo {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
   header {
     display: flex;
     justify-content: space-between;
@@ -190,4 +215,61 @@
     opacity: 0.2;
     z-index: -1;
   }
+  /* Scrollbar for the task list */
+#taskList {
+  max-height: 300px; /* Set a maximum height for the task list */
+  overflow-y: auto; /* Enable vertical scrolling */
+  margin: 0 auto;
+  padding: 10px;
+  border: 2px solid #007acc;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Custom scrollbar styles */
+#taskList::-webkit-scrollbar {
+  width: 8px; /* Scrollbar width */
+}
+
+#taskList::-webkit-scrollbar-track {
+  background: #e0e0e0; /* Track color */
+  border-radius: 5px;
+}
+
+#taskList::-webkit-scrollbar-thumb {
+  background: #007acc; /* Thumb (scroll indicator) color */
+  border-radius: 5px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+#taskList::-webkit-scrollbar-thumb:hover {
+  background: #005f99; /* Thumb color on hover */
+}
+/* Ensure the entire page is scrollable */
+body {
+  height: 100vh;
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+/* Custom scrollbar styles for the entire page */
+body::-webkit-scrollbar {
+  width: 10px; /* Width of the scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: #f0f0f0; /* Track background color */
+  border-radius: 5px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #007acc; /* Thumb (scroll indicator) color */
+  border-radius: 5px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3); /* Subtle shadow for thumb */
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: #005f99; /* Thumb color on hover */
+}
+
   
